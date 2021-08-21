@@ -1,20 +1,19 @@
 #container {
-  width: 400px;
-  height: 400px;
+  width: 40vw;
+  height: 40vw;
   display: grid;
-  grid-template-columns: repeat(16, auto);
-  grid-template-rows: repeat(16, auto);
   justify-content: center;
   align-content: center;
   border: 1px solid black;
-  padding: 0;
+  grid-template-columns: repeat(auto-fit, 100%);
+  grid-template-rows: repeat(auto-fit, 100%);
+  column-gap: 0;
   margin-top: 100px;
-  overflow: hidden;
 }
 .grid {
   background-color: blue;
-  height: 10px;
-  width: 10px;
+  height: 100%;
+  width: 100%;
 }
 body {
   justify-content: center;
