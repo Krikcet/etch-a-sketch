@@ -1,10 +1,12 @@
 /*
-Loop to create divs;
-i = 0; loop while i <= divQuantity; add a div on each loop;
-create element("div");
-;
-append grid divs to container div;
-
+NEWGRID:
+when called, remove exisiting grid;
+prompt for square root of grid area;
+if player enters number > 100, ask again;
+create div element on each iteration and append to container;
+give each div a unique id;
+give all divs a class of grid;
+set #container grid columns and rows to gridRoot;
 */
 document.getElementById('newGridBtn').addEventListener('click', newGrid);
 function removeAllChildNodes(parent) {
@@ -12,7 +14,6 @@ function removeAllChildNodes(parent) {
         parent.removeChild(parent.firstChild);
     }
 }
-
 function newGrid() {
 removeAllChildNodes(container);
 let gridRoot = prompt("Square root of grid?", "16, 32, 48, 100");
@@ -23,7 +24,10 @@ for(i = 0; i < divQuantity; i++) {
     } else {
    let grid = document.createElement("div");
     container.appendChild(grid);
-    grid.setAttribute('class', "grid",);
-    }
+    grid.setAttribute('id', i);
+    grid.setAttribute('class', 'grid');
+    document.getElementById('container').style.setProperty('grid-template-rows', 'repeat('+gridRoot+ ', 1fr');
+    document.getElementById('container').style.gridTemplateColumns = `repeat( ${gridRoot}, 1fr)`
+}
 }
 }
