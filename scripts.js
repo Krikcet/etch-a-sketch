@@ -7,7 +7,23 @@ create div element on each iteration and append to container;
 give each div a unique id;
 give all divs a class of grid;
 set #container grid columns and rows to gridRoot;
+
+SKETCH EFFECT:
+add eventListener to each div;
+on mouseover, change background-color;
+
+RANDOM COLOR:
+make a loop that assigns a random rgb value to randomColor;
+    loop picks random number between 1-16777215 and creates a string after #;
+
 */
+function changeColor() {
+    for (i=0; i <100; i++){
+randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+this.style.backgroundColor =  randomColor;
+this.style.
+}
+}
 document.getElementById('newGridBtn').addEventListener('click', newGrid);
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
@@ -26,8 +42,12 @@ for(i = 0; i < divQuantity; i++) {
     container.appendChild(grid);
     grid.setAttribute('id', i);
     grid.setAttribute('class', 'grid');
-    document.getElementById('container').style.setProperty('grid-template-rows', 'repeat('+gridRoot+ ', 1fr');
-    document.getElementById('container').style.gridTemplateColumns = `repeat( ${gridRoot}, 1fr)`
-}
-}
+    document.getElementById('container').style.setProperty('grid-template-rows', 'repeat('+gridRoot+ ', 1fr');//one method
+    document.getElementById('container').style.gridTemplateColumns = `repeat( ${gridRoot}, 1fr)`; //second method
+    gridNum = document.getElementById(`${i}`);
+    gridNum.addEventListener('mouseover', changeColor)
+
+
+        }
+    }
 }
