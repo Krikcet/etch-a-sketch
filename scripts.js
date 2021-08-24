@@ -56,10 +56,10 @@ function removeAllChildNodes(parent) {
 }
 function newGrid() {
 removeAllChildNodes(container);
-let gridRoot = prompt("Square root of grid?");
+let gridRoot = prompt("Square root of grid?", '1-80');
 divQuantity = Math.pow(gridRoot, 2);
 for(i = 0; i < divQuantity; i++) {
-    if (gridRoot > 100) {
+    if (gridRoot > 80) {
         newGrid();
     } else {
     grid = document.createElement("div");
