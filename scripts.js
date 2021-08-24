@@ -21,6 +21,11 @@ lower opacity with each mouseover;
 start with 1 opacity;
 make each grid square have background color = white;
 make container have background of black;
+
+TO DO:
+MAKE BUTTONS THAT ACTIVATE COLOR, BLACK, FADE TO BLACK;
+MAKE BUTTONS THAT SET PREDETERMINED GRID SIZE;
+STYLE TO RESEMBLE ETCH-A-SKETCH;
 */
 document.getElementById('newGridBtn').addEventListener('click', newGrid);
 
@@ -28,6 +33,11 @@ document.getElementById('newGridBtn').addEventListener('click', newGrid);
 function fadeBlack () {
 this.style.opacity -= .1
 }
+
+
+
+
+
 
 
 function changeColor() {
@@ -60,8 +70,8 @@ for(i = 0; i < divQuantity; i++) {
     document.getElementById('container').style.setProperty('grid-template-rows', 'repeat('+gridRoot+ ', 1fr');//one method
     document.getElementById('container').style.gridTemplateColumns = `repeat( ${gridRoot}, 1fr)`; //second method
     gridNum = document.getElementById(i);
-    gridNum.addEventListener('mouseover', changeColor)
-    gridNum.addEventListener('mouseover', fadeBlack)
+    gridNum.addEventListener('mouseover', changeColor);
+    gridNum.addEventListener('mouseover', fadeBlack);
     gridNum.style.opacity = 1;
     container.style.backgroundColor = 'black';
         }
