@@ -25,10 +25,9 @@ make container have background of black;
 TO DO:
 MAKE BUTTONS THAT ACTIVATE COLOR, BLACK, FADE TO BLACK;
 MAKE BUTTONS THAT SET PREDETERMINED GRID SIZE;
-STYLE TO RESEMBLE ETCH-A-SKETCH;
 */
 document.getElementById('newGridBtn').addEventListener('click', newGrid);
-
+document.getElementById('gitBtn').addEventListener('click', () => window.location = 'https://github.com/Krikcet/etch-a-sketch')
 
 function fadeBlack () {
 this.style.opacity -= .1

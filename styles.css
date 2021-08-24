@@ -37,10 +37,29 @@ h1 {
   font-size: 1.2em;
   text-align: center;
 }
-#blankBtn {
+#gitBtn {
   justify-self: center;
   position: relative;
   left: 140px;
+  font-size: 3.4em;
+}
+
+#gitIcon:hover {
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.5s;
+  font-size: 1.1em;
 }
 #container {
   min-width: 400px;
@@ -66,4 +85,5 @@ body {
   justify-content: center;
   display: grid;
   background-color: lightblue;
+  padding: 90px;
 }
